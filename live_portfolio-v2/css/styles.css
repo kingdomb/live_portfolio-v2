@@ -1,0 +1,589 @@
+/*New*/
+
+/* CSS */
+/*--marigold: hsla(38, 76%, 87%, 1);
+--raisin-black: hsla(240, 17%, 14%, 1);
+--feldgrau: hsla(184, 17%, 35%, 1);
+--timberwolf: hsla(38, 4%, 83%, 1);
+--dark-red: hsla(4, 92%, 57%, 1);
+*/
+/* SCSS HEX */
+/*$marigold: #dfa035ff;
+$raisin-black: #1e1e24ff;
+$feldgrau: #4a5859ff;
+$timberwolf: #d3d0cbff;
+$dark-red: #92140cff;*/
+
+/* SCSS HSL */
+/*$marigold: hsla(38, 76%, 87%, 1);
+$raisin-black: hsla(240, 17%, 14%, 1);
+$feldgrau: hsla(184, 17%, 35%, 1);
+$timberwolf: hsla(38, 4%, 83%, 1);
+$dark-red: hsla(4, 92%, 57%, 1);*/
+
+/* SCSS RGB */
+/*$marigold: rgba(223, 160, 53, 1);
+$raisin-black: rgba(30, 30, 36, 1);
+$feldgrau: rgba(74, 88, 89, 1);
+$timberwolf: rgba(211, 208, 203, 1);
+$dark-red: rgba(146, 20, 12, 1);
+*/
+/* SCSS Gradient */
+/*$gradient-top: linear-gradient(0deg, #dfa035ff, #1e1e24ff, #4a5859ff, #d3d0cbff, #92140cff);
+$gradient-right: linear-gradient(90deg, #dfa035ff, #1e1e24ff, #4a5859ff, #d3d0cbff, #92140cff);
+$gradient-bottom: linear-gradient(180deg, #dfa035ff, #1e1e24ff, #4a5859ff, #d3d0cbff, #92140cff);
+$gradient-left: linear-gradient(270deg, #dfa035ff, #1e1e24ff, #4a5859ff, #d3d0cbff, #92140cff);
+$gradient-top-right: linear-gradient(45deg, #dfa035ff, #1e1e24ff, #4a5859ff, #d3d0cbff, #92140cff);
+$gradient-bottom-right: linear-gradient(135deg, #dfa035ff, #1e1e24ff, #4a5859ff, #d3d0cbff, #92140cff);
+$gradient-top-left: linear-gradient(225deg, #dfa035ff, #1e1e24ff, #4a5859ff, #d3d0cbff, #92140cff);
+$gradient-bottom-left: linear-gradient(315deg, #dfa035ff, #1e1e24ff, #4a5859ff, #d3d0cbff, #92140cff);
+$gradient-radial: radial-gradient(#dfa035ff, #1e1e24ff, #4a5859ff, #d3d0cbff, #92140cff);*/
+
+.btn-primary {
+    color: #fff;
+    background-color: #FAB03B;
+    border-color: #FAB03B;
+}
+
+.btn-primary:hover,
+.btn-primary:focus,
+.btn-primary.focus,
+.btn-primary.disabled,
+.btn-primary:disabled,
+.btn-primary:not(:disabled):not(.disabled):active,
+.btn-primary:not(:disabled):not(.disabled).active,
+.show>.btn-primary.dropdown-toggle,
+.btn-primary:not(:disabled):not(.disabled):active:focus,
+.btn-primary:not(:disabled):not(.disabled).active:focus,
+.show>.btn-primary.dropdown-toggle:focus {
+    color: #fff;
+    background-color: #e6991f;
+    border-color: #e6991f;
+    box-shadow: none;
+}
+
+/*General styles*/
+a {
+    color: #fab03b;
+    text-decoration: none;
+    background-color: transparent;
+    font-weight: 500;
+}
+
+a:hover {
+    color: #fab03b;
+
+}
+
+.subheading {
+    font-size: 1.5em;
+    font-weight: 200;
+}
+
+
+.btn {
+    font-family: "Merriweather Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+}
+
+.btn-xl {
+    padding: 1.25rem 2.25rem;
+    font-size: 0.85rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    border: none;
+    border-radius: 10rem;
+}
+
+.btn-sm {
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    border: none;
+    border-radius: 10rem;
+    padding: 0.55rem 0.85rem;
+}
+
+.bg-primary {
+    background-color: #FAB03B !important;
+}
+
+.bg-black {
+    background-color: #1e1e24ff;
+}
+
+
+
+/*Nav*/
+
+#mainNav {
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+    background-color: #fff;
+    transition: background-color 0.2s ease;
+}
+
+#mainNav .navbar-brand {
+    font-family: "Merriweather Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    font-weight: 700;
+    color: #212529;
+}
+
+#mainNav .navbar-nav .nav-item .nav-link {
+    color: #6c757d;
+    font-family: "Merriweather Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    font-weight: 700;
+    font-size: 0.9rem;
+    padding: 0.75rem 0;
+}
+
+#mainNav .navbar-nav .nav-item .nav-link:hover,
+#mainNav .navbar-nav .nav-item .nav-link:active {
+    color: #FAB03B;
+}
+
+#mainNav .navbar-nav .nav-item .nav-link.active {
+    color: #FAB03B !important;
+}
+
+@media (min-width: 992px) {
+    #mainNav {
+        box-shadow: none;
+        background-color: transparent;
+    }
+
+    #mainNav .navbar-brand {
+        color: rgba(255, 255, 255, 0.7);
+    }
+
+    #mainNav .navbar-brand:hover {
+        color: #fff;
+    }
+
+    #mainNav .navbar-nav .nav-item .nav-link {
+        color: rgba(255, 255, 255, 0.7);
+        padding: 0 1rem;
+    }
+
+    #mainNav .navbar-nav .nav-item .nav-link:hover {
+        color: #fff;
+    }
+
+    #mainNav .navbar-nav .nav-item:last-child .nav-link {
+        padding-right: 0;
+    }
+
+    #mainNav.navbar-scrolled {
+        box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+        background-color: #fff;
+    }
+
+    #mainNav.navbar-scrolled .navbar-brand {
+        color: #212529;
+    }
+
+    #mainNav.navbar-scrolled .navbar-brand:hover {
+        color: #FAB03B;
+    }
+
+    #mainNav.navbar-scrolled .navbar-nav .nav-item .nav-link {
+        color: #212529;
+    }
+
+    #mainNav.navbar-scrolled .navbar-nav .nav-item .nav-link:hover {
+        color: #FAB03B;
+    }
+}
+
+a.navbar-brand img {
+    width: 170px;
+}
+
+.navbar .logo-black {
+    display: none;
+}
+
+.navbar.navbar-scrolled .logo-black {
+    display: block;
+}
+
+.navbar .logo-white {
+    display: block;
+}
+
+.navbar.navbar-scrolled .logo-white {
+    display: none;
+}
+
+.navbar-light .navbar-toggler {
+    border-color: transparent;
+    outline: 0;
+}
+
+
+
+
+/*Masthead*/
+
+header.masthead {
+    padding-top: 10rem;
+    padding-bottom: calc(10rem - 4.5rem);
+    /*background: linear-gradient(to bottom, rgba(92, 77, 66, 0.8) 0%, rgba(92, 77, 66, 0.8) 100%), url("../assets/img/programming-bg.png");*/
+    background: linear-gradient(to bottom, rgba(30, 30, 36, 0.8) 0%, rgba(30, 30, 36, 0.8) 100%), url("../assets/img/programming-bg.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    background-size: cover;
+}
+
+header.masthead h1 {
+    font-size: 2.25rem;
+}
+
+header.masthead p#masthead-p {
+    font-size: 2em;
+}
+
+@media (min-width: 992px) {
+    header.masthead {
+        height: 100vh;
+        min-height: 40rem;
+        padding-top: 4.5rem;
+        padding-bottom: 0;
+    }
+
+    header.masthead p {
+        font-size: 1.15rem;
+    }
+
+    header.masthead h1 {
+        font-size: 3rem;
+    }
+}
+
+@media (min-width: 1200px) {
+    header.masthead h1 {
+        font-size: 3.5rem;
+    }
+}
+
+hr.divider {
+    max-width: 3.25rem;
+    border-width: 0.2rem;
+    border-color: #FAB03B;
+}
+
+.text-white-75 {
+    color: rgba(255, 255, 255, 0.75);
+}
+
+.page-section {
+    padding: 8rem 0;
+}
+
+.profile-pic img {
+    width: 250px;
+    border-radius: 100%;
+    border: 10px solid white;
+    box-shadow: 0px 0px 17px rgba(0, 0, 0, 0.3803921568627451);
+}
+
+/*About*/
+section#about {
+    background-color: #F4623A;
+}
+
+section#about p {
+    font-size: 1.3em;
+    font-weight: 100;
+}
+
+/*Skills*/
+section#skills {
+    background: #f6f6f6;
+}
+
+#skills-list ul li {
+    font-size: 20px;
+    font-weight: 200;
+    padding-bottom: 4px;
+}
+
+#skills-list ul {
+    list-style: none;
+    padding: 0;
+}
+
+#skills .dev-icons {
+    font-size: 3rem;
+}
+
+div#skills-icons {
+    /*background: #fff;*/
+    padding: 30px 0;
+    margin: 30px 0 0;
+}
+
+div#skills-icons svg {
+    color: #c7c7c7;
+}
+
+/*Portfolio*/
+#portfolio .container-fluid,
+#portfolio .container-sm,
+#portfolio .container-md,
+#portfolio .container-lg,
+#portfolio .container-xl {
+    max-width: 1920px;
+}
+
+#portfolio .container-fluid .portfolio-box,
+#portfolio .container-sm .portfolio-box,
+#portfolio .container-md .portfolio-box,
+#portfolio .container-lg .portfolio-box,
+#portfolio .container-xl .portfolio-box {
+    position: relative;
+    display: block;
+}
+
+#portfolio .container-fluid .portfolio-box .portfolio-box-caption,
+#portfolio .container-sm .portfolio-box .portfolio-box-caption,
+#portfolio .container-md .portfolio-box .portfolio-box-caption,
+#portfolio .container-lg .portfolio-box .portfolio-box-caption,
+#portfolio .container-xl .portfolio-box .portfolio-box-caption {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    bottom: 0;
+    text-align: center;
+    opacity: 0;
+    color: #fff;
+    background: rgba(250, 176, 59, 0.94);
+    transition: opacity 0.25s ease;
+    text-align: center;
+}
+
+#portfolio .container-fluid .portfolio-box .portfolio-box-caption .project-category,
+#portfolio .container-sm .portfolio-box .portfolio-box-caption .project-category,
+#portfolio .container-md .portfolio-box .portfolio-box-caption .project-category,
+#portfolio .container-lg .portfolio-box .portfolio-box-caption .project-category,
+#portfolio .container-xl .portfolio-box .portfolio-box-caption .project-category {
+    font-family: "Merriweather Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    font-size: 0.85rem;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+#portfolio .container-fluid .portfolio-box .portfolio-box-caption .project-name,
+#portfolio .container-sm .portfolio-box .portfolio-box-caption .project-name,
+#portfolio .container-md .portfolio-box .portfolio-box-caption .project-name,
+#portfolio .container-lg .portfolio-box .portfolio-box-caption .project-name,
+#portfolio .container-xl .portfolio-box .portfolio-box-caption .project-name {
+    font-size: 1.2rem;
+}
+
+#portfolio .container-fluid .portfolio-box:hover .portfolio-box-caption,
+#portfolio .container-sm .portfolio-box:hover .portfolio-box-caption,
+#portfolio .container-md .portfolio-box:hover .portfolio-box-caption,
+#portfolio .container-lg .portfolio-box:hover .portfolio-box-caption,
+#portfolio .container-xl .portfolio-box:hover .portfolio-box-caption {
+    opacity: 1;
+}
+
+
+#portfolio .featured-text {
+    padding: 2rem;
+}
+
+@media (min-width: 992px) {
+    #portfolio .featured-text {
+        padding: 0 0 0 2rem;
+        border-left: 0.5rem solid #64a19d;
+    }
+}
+
+#portfolio .project-text {
+    padding: 3rem;
+    font-size: 90%;
+}
+
+@media (min-width: 992px) {
+    #portfolio .project-text {
+        padding: 2rem;
+    }
+
+    #portfolio .project-text hr {
+        border-color: #FAB03B;
+        border-width: 0.25rem;
+        width: 30%;
+    }
+}
+
+.project-text h6 {
+    font-weight: 300;
+}
+
+/*Testimonials*/
+.carousel {
+    margin: 50px auto;
+    padding: 0 70px;
+}
+
+.carousel .item {
+    color: #999;
+    font-size: 14px;
+    text-align: center;
+    overflow: hidden;
+    min-height: 290px;
+}
+
+.carousel .item .img-box {
+    width: 135px;
+    height: 135px;
+    margin: 0 auto;
+    padding: 5px;
+    border: 1px solid #ddd;
+    border-radius: 50%;
+}
+
+.carousel .img-box img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    border-radius: 50%;
+}
+
+.carousel .testimonial {
+    padding: 30px 0 10px;
+    font-size: 1.6em;
+    font-weight: 300;
+}
+
+.carousel .overview {
+    font-style: italic;
+}
+
+.carousel .overview b {
+    text-transform: uppercase;
+    color: #FAB03B;
+}
+
+.carousel .carousel-control {
+    width: 40px;
+    height: 40px;
+    margin-top: -20px;
+    top: 50%;
+    background: none;
+}
+
+.carousel-control i {
+    font-size: 68px;
+    line-height: 42px;
+    position: absolute;
+    display: inline-block;
+    color: rgba(0, 0, 0, 0.8);
+    text-shadow: 0 3px 3px #e6e6e6, 0 0 0 #000;
+}
+
+.carousel .carousel-indicators {
+    bottom: -40px;
+}
+
+.carousel-indicators li,
+.carousel-indicators li.active {
+    width: 10px;
+    height: 10px;
+    margin: 1px 3px;
+    border-radius: 50%;
+}
+
+.carousel-indicators li {
+    background: #999;
+    border-color: transparent;
+    box-shadow: inset 0 2px 1px rgba(0, 0, 0, 0.2);
+    border: 0;
+}
+
+.carousel-indicators li.active {
+    background: #555;
+    box-shadow: inset 0 2px 1px rgba(0, 0, 0, 0.2);
+}
+
+
+/*Contact*/
+section#contact {
+    background: #f5f5f5;
+}
+
+#contact .social {
+    margin-top: 5rem;
+}
+
+#contact .social a {
+    text-align: center;
+    height: 3rem;
+    width: 3rem;
+    background: #FFC107;
+    border-radius: 100%;
+    line-height: 3rem;
+    color: rgb(247, 247, 247);
+}
+
+#contact .social a:hover {
+    color: rgba(255, 255, 255, 0.5);
+}
+
+#contact .social a:active {
+    color: #fff;
+}
+
+#contact .mailto {
+    color: #FAB03B;
+    font-size: 20px;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+/*Footer*/
+.footer-logo img {
+    width: 150px;
+}
+
+/*Media Queries*/
+@media only screen and (max-width : 1200px) {}
+
+@media only screen and (max-width : 979px) {
+    #skills-list ul {
+        text-align: center !important;
+        margin-bottom: 0;
+    }
+    .navbar .logo-black {
+        display: block;
+    }
+
+    .navbar .logo-white {
+        display: none;
+    }
+
+}
+
+@media only screen and (max-width : 767px) {
+    div#navbarResponsive li {
+        text-align: center;
+    }
+    .footer-logo {
+      margin-bottom: 10px;
+    }
+    .footer-logo,
+    .footer-text .small {
+        text-align: center!important;
+    }
+}
+
+@media only screen and (max-width : 480px) {
+
+}
+
+@media only screen and (max-width : 320px) {}
