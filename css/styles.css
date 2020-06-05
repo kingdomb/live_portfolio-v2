@@ -289,6 +289,7 @@ hr.divider {
 /*About*/
 section#about {
     background-color: #F4623A;
+    height: 100vh
 }
 
 section#about p {
