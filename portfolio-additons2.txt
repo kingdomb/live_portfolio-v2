@@ -1,0 +1,26 @@
+Right Image Portfolio
+<div class="row justify-content-center no-gutters mb-5 mb-lg-0 mb-md-5 mb-sm-5">
+    <div class="portfolio-img-wrapper col-lg-6 d-flex justify-content-center align-items-center"><a
+            href="https://kingdomb.github.io/google-promo/" target="_blank"><img class="img-fluid"
+                src="assets/img/portfolio/g-home-16-9.png"
+                alt="clickable image of the google promo landing view that links to the live demo"></a>
+    </div>
+    <div class="col-lg-6">
+        <div class="bg-black text-center h-100 project">
+            <div class="d-flex h-100">
+                <div class="project-text w-100 my-auto text-center text-lg-left">
+                    <h4 class="text-white">Google Home</h4>
+                    <hr class="d-none d-lg-block mb-10 ml-0">
+                    <h6 class="text-white">JavaScript, HTML, CSS, Bootstrap</h6>
+                    <p class="mb-10 text-white-50">This project displays my use of javascript animations,
+                        and website design best practices. Firsts in this project included the added
+                        animations.</p>
+                    <a href="https://KingdomB.github.io/google-promo/" class="btn btn-primary btn-sm"
+                        target="_blank">View Demo</a>
+                    <a href="https://github.com/KingdomB/google-promo" class="btn btn-primary btn-sm"
+                        target="_blank">View Code</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
