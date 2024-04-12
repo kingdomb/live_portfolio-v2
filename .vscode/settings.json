@@ -4,7 +4,12 @@
         "create",
         "db",
         "db create collection nodeflix",
-        "nodeflix"
+        "ecommerce",
+        "Lambo",
+        "nodeflix",
+        "Perju",
+        "Salesloft",
+        "Wabukenda"
     ],
     "liveServer.settings.port": 5501
 }
