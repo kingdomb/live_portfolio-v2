@@ -7,7 +7,7 @@ var TxtType = function (el, toRotate, period) {
   this.tick();
   this.isDeleting = false;
   this.pEl = document.getElementById('masthead-p');
-  this.pTexts = ["And I'm a Front-End developer.", '...to my portfolio!'];
+  this.pTexts = ["And I'm a Full-Stack developer.", '...to my portfolio!'];
 };
 
 TxtType.prototype.tick = function () {
