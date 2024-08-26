@@ -562,9 +562,9 @@ section#contact {
 }
 
 /*Media Queries*/
-@media only screen and (max-width : 1200px) {}
+@media (max-width : 1200px) {}
 
-@media only screen and (max-width : 979px) {
+@media (max-width : 979px) {
     #skills-list ul {
         text-align: center !important;
         margin-bottom: 0;
@@ -579,7 +579,7 @@ section#contact {
 
 }
 
-@media only screen and (max-width : 767px) {
+@media (max-width : 767px) {
     div#navbarResponsive li {
         text-align: center;
     }
@@ -592,8 +592,16 @@ section#contact {
     }
 }
 
-@media only screen and (max-width : 480px) {
+@media (max-width : 540px) {
+    #masthead-h1 {
+        min-height: 3em;
+        /* Adjust this value based on expected content */
+    }
 
+    #masthead-p {
+        min-height: 3em;
+        /* Adjust this value based on expected content */
+    }
 }
 
-@media only screen and (max-width : 320px) {}
+@media (max-width : 320px) {}

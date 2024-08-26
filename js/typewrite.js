@@ -1,13 +1,15 @@
+// typewriter.js
+
 var TxtType = function (el, toRotate, period) {
   this.toRotate = toRotate;
   this.el = el;
   this.loopNum = 0;
   this.period = parseInt(period, 10) || 2000;
   this.txt = '';
-  this.tick();
   this.isDeleting = false;
   this.pEl = document.getElementById('masthead-p');
   this.pTexts = ["And I'm a Full-Stack developer.", '...to my portfolio!'];
+  this.tick();
 };
 
 TxtType.prototype.tick = function () {
@@ -39,7 +41,7 @@ TxtType.prototype.tick = function () {
       that.isDeleting = false;
       that.loopNum++;
       that.tick();
-    }, 1500); // Pause for 1 second before starting the next text
+    }, 1500); // Wait for fade-out effect to complete
     return; // Exit to wait for fade-out and pause
   }
 
@@ -54,7 +56,7 @@ TxtType.prototype.fadeInPText = function (i) {
     that.pEl.innerHTML = that.pTexts[i];
     that.pEl.classList.remove('fade-out');
     that.pEl.classList.add('fade-in');
-  }, 500); // Wait for 1 second before fading in the text
+  }, 500); // Wait for 500ms before fading in the text
 };
 
 TxtType.prototype.fadeOutPText = function (i) {
@@ -82,5 +84,5 @@ window.onload = function () {
         .fade-in { opacity: 1; transition: opacity 1s; }
         .fade-out { opacity: 0; transition: opacity 1s; }
     `;
-  document.body.appendChild(css);
+  document.head.appendChild(css);
 };
