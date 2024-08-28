@@ -45,27 +45,85 @@ $gradient-radial: radial-gradient(#dfa035ff, #1e1e24ff, #4a5859ff, #d3d0cbff, #9
     max-width: 100vw !important;
 } */
 
-.btn-primary {
+/* Conversion Modal */
+/* TODO ADJUST OR REMOVE POSITION PROPERTY BELOW */
+/* .modal-dialog {
+    position: relative;
+} */
+
+div.modal-content {
+    background-color: #343a40;
     color: #fff;
-    background-color: #FAB03B;
-    border-color: #FAB03B;
 }
 
-.btn-primary:hover,
-.btn-primary:focus,
-.btn-primary.focus,
-.btn-primary.disabled,
-.btn-primary:disabled,
-.btn-primary:not(:disabled):not(.disabled):active,
-.btn-primary:not(:disabled):not(.disabled).active,
-.show>.btn-primary.dropdown-toggle,
-.btn-primary:not(:disabled):not(.disabled):active:focus,
-.btn-primary:not(:disabled):not(.disabled).active:focus,
-.show>.btn-primary.dropdown-toggle:focus {
+.close span {
     color: #fff;
-    background-color: #e6991f;
-    border-color: #e6991f;
-    box-shadow: none;
+}
+
+.btn-modal-success {
+    color: #fff;
+    background-color: #00c92f; /* A shade of green for success */
+    border-color: #00c92f;
+}
+
+.btn-modal-warning {
+    color: #fff;
+    background-color: #e4ae0e; /* A shade of yellow for warning */
+    border-color: #e4ae0e;
+}
+
+.btn-modal-danger {
+    color: #fff;
+    background-color: #dc3545; /* A shade of red for danger */
+    border-color: #dc3545;
+}
+
+.btn-modal-success:hover,
+.btn-modal-success:focus,
+.btn-modal-success.focus,
+.btn-modal-success.disabled,
+.btn-modal-success:disabled,
+.btn-modal-success:not(:disabled):not(.disabled):active,
+.btn-modal-success:not(:disabled):not(.disabled).active,
+.show>.btn-modal-success.dropdown-toggle,
+.btn-modal-success:not(:disabled):not(.disabled):active:focus,
+.btn-modal-success:not(:disabled):not(.disabled).active:focus,
+.show>.btn-modal-success.dropdown-toggle:focus {
+    color: #fff;
+    background-color: #218838;
+    border-color: #1e7e34;
+}
+
+.btn-modal-warning:hover,
+.btn-modal-warning:focus,
+.btn-modal-warning.focus,
+.btn-modal-warning.disabled,
+.btn-modal-warning:disabled,
+.btn-modal-warning:not(:disabled):not(.disabled):active,
+.btn-modal-warning:not(:disabled):not(.disabled).active,
+.show>.btn-modal-warning.dropdown-toggle,
+.btn-modal-warning:not(:disabled):not(.disabled):active:focus,
+.btn-modal-warning:not(:disabled):not(.disabled).active:focus,
+.show>.btn-modal-warning.dropdown-toggle:focus {
+    color: #fff;
+    background-color: #c89600;
+    border-color: #c89600;
+}
+
+.btn-modal-danger:hover,
+.btn-modal-danger:focus,
+.btn-modal-danger.focus,
+.btn-modal-danger.disabled,
+.btn-modal-danger:disabled,
+.btn-modal-danger:not(:disabled):not(.disabled):active,
+.btn-modal-danger:not(:disabled):not(.disabled).active,
+.show>.btn-modal-danger.dropdown-toggle,
+.btn-modal-danger:not(:disabled):not(.disabled):active:focus,
+.btn-modal-danger:not(:disabled):not(.disabled).active:focus,
+.show>.btn-modal-danger.dropdown-toggle:focus {
+    color: #fff;
+    background-color: #c82333;
+    border-color: #bd2130;
 }
 
 /*General styles*/
@@ -100,6 +158,16 @@ a:hover {
     border-radius: 10rem;
 }
 
+.btn-md {
+    padding: .75rem 1.30rem;
+    font-size: 0.80rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    border: none;
+    border-radius: 10rem;
+    min-width: fit-content;
+}
+
 .btn-sm {
     font-size: 0.75rem;
     font-weight: 700;
@@ -109,6 +177,29 @@ a:hover {
     padding: 0.55rem 0.85rem;
 }
 
+.btn-primary {
+    color: #fff;
+    background-color: #FAB03B;
+    border-color: #FAB03B;
+}
+
+.btn-primary:hover,
+.btn-primary:focus,
+.btn-primary.focus,
+.btn-primary.disabled,
+.btn-primary:disabled,
+.btn-primary:not(:disabled):not(.disabled):active,
+.btn-primary:not(:disabled):not(.disabled).active,
+.show>.btn-primary.dropdown-toggle,
+.btn-primary:not(:disabled):not(.disabled):active:focus,
+.btn-primary:not(:disabled):not(.disabled).active:focus,
+.show>.btn-primary.dropdown-toggle:focus {
+    color: #fff;
+    background-color: #e6991f;
+    border-color: #e6991f;
+    box-shadow: none;
+}
+
 .bg-primary {
     background-color: #FAB03B !important;
 }
@@ -116,8 +207,6 @@ a:hover {
 .bg-black {
     background-color: #1e1e24ff;
 }
-
-
 
 /*Nav*/
 
