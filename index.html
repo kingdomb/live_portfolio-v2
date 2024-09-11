@@ -16,7 +16,8 @@
     <link rel="icon" type="image/x-icon" href="assets/img/favicon.ico" />
     <!-- Conversion Modal -->
     <script src="./js/mouse-event.js" defer></script>
-    <!-- <script src="./js/submit-feedback.js" defer></script> -->
+    <script src="./js/focus-events.js" defer></script>
+    <script src="./js/submit-feedback.js" defer></script>
     <!-- Font Awesome icons (free version)-->
     <script src="https://use.fontawesome.com/releases/v5.13.0/js/all.js" crossorigin="anonymous"></script>
     <!-- Google fonts-->
@@ -42,8 +43,8 @@
 <!-- Adding Google tag for analytics tracking. -->
 
 <body id="page-top">
-    <!-- Conversion Modal
-    <div class="modal fade" id="feedbackModal" tabindex="-1" aria-labelledby="modalLabel" aria-hidden="true">
+    <!-- Conversion Modal -->
+    <!-- <div class="modal fade" id="feedbackModal" tabindex="-1" aria-labelledby="modalLabel" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable" style="min-width: 15.5rem;">
             <div class="modal-content">
                 <div class="modal-header">
@@ -94,6 +95,60 @@
         </div>
     </div> -->
 
+    <div class="modal fade" id="feedbackModal" tabindex="-1" aria-labelledby="modalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable" style="min-width: 15.5rem;">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title" id="modalLabel">Wait! Before You Go...</h1>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <p>I'd love to hear from you!</p>
+                    <h5><strong>Select an option below explaining how likely you are to call me for an
+                            interview?</strong>
+                    </h5>
+                    <span style="color: #e6991f; font-size: small">Your feedback helps me to improve and better showcase
+                        my
+                        skills and experience.</span>
+                    <br><br>
+                    <form id="feedback-form" action="http://localhost:3000/feedback" method="POST">
+                        <div class="form-group">
+                            <button type="button" name="button1" id="button1"
+                                class="btn btn-modal-success btn-block likely-btn">
+                                <b>Very Likely:</b> I'm impressed and ready to connect.
+                            </button>
+                            <button type="button" name="button2" id="button2"
+                                class="btn btn-modal-warning btn-block likely-btn">
+                                <b>Somewhat Likely:</b> I'm interested, but need more information.
+                            </button>
+                            <button type="button" name="button3" id="button3"
+                                class="btn btn-modal-danger btn-block likely-btn">
+                                <b>Not Likely:</b> I'm not convinced yet.
+                            </button>
+                        </div>
+                        <div class="form-group">
+                            <label for="message-text" class="col-form-label">Comments:&nbsp;
+                                <span style="color: #e6991f; font-size: small; padding-left: 4px;">(Optional)</span>
+                            </label>
+                            <textarea class="form-control" id="message-text" name="comments"></textarea>
+                        </div>
+                        <div class="form-group">
+                            <label for="recipient-email" class="col-form-label">Email:&nbsp;
+                                <span style="color: #e6991f; font-size: small; padding-left: 4px;">(Optional)</span>
+                            </label>
+                            <input type="email" name="email" class="form-control" id="recipient-email">
+                        </div>
+                        <div class="modal-footer d-flex justify-content-center">
+                            <button type="submit" id="submit" class="btn btn-primary btn-md submit-btn"
+                                style="width: 30%;">Send</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
     <!-- Response Modal -->
     <div class="modal fade" id="responseModal" tabindex="-1" aria-labelledby="modalLabel" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable ">
@@ -214,6 +269,7 @@
                 <div class="col-lg-6 col-md-12 text-center">
                     <ul class="text-left">
                         <li>Jest/Puppeteer</li>
+                        <li>Redux</li>
                         <li>Jira/Trello</li>
                         <li>Azure Portal/DevOps</li>
                         <li>Architectural Design/Documentation</li>
@@ -682,6 +738,7 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.bundle.min.js"></script>
     <!-- Third party plugin JS-->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/dompurify/2.3.8/purify.min.js"></script>
     <!-- Core theme JS-->
     <script src="js/scripts.js"></script>
     <script src="js/typewrite.js"></script>

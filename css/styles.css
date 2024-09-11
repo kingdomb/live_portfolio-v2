@@ -61,24 +61,24 @@ div.modal-content {
 }
 
 .btn-modal-success {
-    color: #fff;
+    color: #000000;
     background-color: #00c92f; /* A shade of green for success */
     border-color: #00c92f;
 }
 
 .btn-modal-warning {
-    color: #fff;
+    color: #000000;
     background-color: #e4ae0e; /* A shade of yellow for warning */
     border-color: #e4ae0e;
 }
 
 .btn-modal-danger {
-    color: #fff;
+    color: #000000;
     background-color: #dc3545; /* A shade of red for danger */
     border-color: #dc3545;
 }
 
-.btn-modal-success:hover,
+/* .btn-modal-success:hover,
 .btn-modal-success:focus,
 .btn-modal-success.focus,
 .btn-modal-success.disabled,
@@ -89,7 +89,6 @@ div.modal-content {
 .btn-modal-success:not(:disabled):not(.disabled):active:focus,
 .btn-modal-success:not(:disabled):not(.disabled).active:focus,
 .show>.btn-modal-success.dropdown-toggle:focus {
-    color: #fff;
     background-color: #218838;
     border-color: #1e7e34;
 }
@@ -105,7 +104,6 @@ div.modal-content {
 .btn-modal-warning:not(:disabled):not(.disabled):active:focus,
 .btn-modal-warning:not(:disabled):not(.disabled).active:focus,
 .show>.btn-modal-warning.dropdown-toggle:focus {
-    color: #fff;
     background-color: #c89600;
     border-color: #c89600;
 }
@@ -121,10 +119,9 @@ div.modal-content {
 .btn-modal-danger:not(:disabled):not(.disabled):active:focus,
 .btn-modal-danger:not(:disabled):not(.disabled).active:focus,
 .show>.btn-modal-danger.dropdown-toggle:focus {
-    color: #fff;
     background-color: #c82333;
     border-color: #bd2130;
-}
+} */
 
 /*General styles*/
 a {
