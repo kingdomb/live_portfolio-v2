@@ -1,4 +1,4 @@
-//submit-feedback.js
+//submit-feedback2.js
 
 document.addEventListener('DOMContentLoaded', () => {
   let feedbackValue = '';
@@ -21,65 +21,69 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   // Handle form submission
-  document
-    .getElementById('feedback-form')
-    .addEventListener('submit', function (e) {
-      e.preventDefault(); // Prevent the default form submission
+  document.getElementById('feedback-form').addEventListener('submit', function (e) {
+    e.preventDefault(); // Prevent the default form submission
 
-      // Collect the entered values
-      const comments = document.getElementById('message-text').value.trim();
-      const email = document.getElementById('recipient-email').value.trim();
+    // Show the loading spinner
+    document.getElementById('spinner-container').style.display = 'block';
+    document.getElementById('submit').style.display = 'none';
 
-      // Log collected values for debugging
-      console.log('Collected Email:', email);
-      console.log('Collected Feedback:', feedbackValue);
-      console.log('Collected Comments:', comments);
+    // Collect the entered values
+    const comments = document.getElementById('message-text').value.trim();
+    const email = document.getElementById('recipient-email').value.trim();
 
-      // Ensure feedbackValue has been set before submitting
-      if (!feedbackValue) {
-        alert('Please select your feedback before submitting.');
-        return;
-      }
+    // Log collected values for debugging
+    console.log('Collected Email:', email);
+    console.log('Collected Feedback:', feedbackValue);
+    console.log('Collected Comments:', comments);
 
-      // Construct the data object to send
-      const data = {
-        email: email,
-        feedback: feedbackValue,
-        comments: comments,
-      };
+    // Ensure feedbackValue has been set before submitting
+    if (!feedbackValue) {
+      alert('Please select your feedback before submitting.');
+      document.getElementById('spinner-container').style.display = 'none'; // Hide spinner
+      document.getElementById('submit').style.display = 'block'; // Show submit button again
+      return;
+    }
 
-      // Log data to be sent
-      console.log('Data to be sent:', data);
+    // Construct the data object to send
+    const data = {
+      email: email,
+      feedback: feedbackValue,
+      comments: comments,
+    };
 
-      // Send data to the server via fetch
-      fetch(this.action, {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(data),
+    // Log data to be sent
+    console.log('Data to be sent:', data);
+
+    // Send data to the server via fetch
+    fetch(this.action, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(data),
+    })
+      .then((response) => {
+        if (!response.ok) {
+          throw new Error('Network response was not ok');
+        }
+        return response.json();
       })
-        .then((response) => {
-          if (!response.ok) {
-            throw new Error('Network response was not ok');
-          }
-          return response.json();
-        })
-        .then((data) => {
-          if (data.message === 'Feedback received successfully') {
-            console.log('Feedback submission successful');
+      .then((data) => {
+        if (data.message === 'Feedback received successfully') {
+          console.log('Feedback submission successful');
 
-            // Set a cookie that expires in 7 days to prevent modal from opening
-            const date = new Date();
-            date.setTime(date.getTime() + 7 * 24 * 60 * 60 * 1000); // 7 days in milliseconds
-            document.cookie = `modalClosed=true; expires=${date.toUTCString()}; path=/`;
+          // Set a cookie that expires in 7 days to prevent modal from opening
+          const date = new Date();
+          date.setTime(date.getTime() + 7 * 24 * 60 * 60 * 1000); // 7 days in milliseconds
+          document.cookie = `modalClosed=true; expires=${date.toUTCString()}; path=/`;
 
-            // Clear the form fields
-            document.getElementById('feedback-form').reset();
-            feedbackValue = ''; // Reset the feedback value
+          // Clear the form fields
+          document.getElementById('feedback-form').reset();
+          feedbackValue = ''; // Reset the feedback value
 
-            // Sanitize the HTML content
-            const sanitizedHTML = DOMPurify.sanitize(`
+          // Sanitize the HTML content
+          const sanitizedHTML = DOMPurify.sanitize(`
             <div class="modal fade" id="responseModal" tabindex="-1" aria-labelledby="modalLabel" aria-hidden="true">
                 <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable ">
                     <div class="modal-content" style="padding: 1.5rem; min-width: min-content;">
@@ -99,25 +103,28 @@ document.addEventListener('DOMContentLoaded', () => {
             </div>
           `);
 
-            // Replace inner HTML of the modal
-            const feedbackModalEl = document.getElementById('feedbackModal');
-            feedbackModalEl.innerHTML = sanitizedHTML;
+          // Replace inner HTML of the modal
+          const feedbackModalEl = document.getElementById('feedbackModal');
+          feedbackModalEl.innerHTML = sanitizedHTML;
 
-            // Re-initialize and show the response modal
-            const responseModalEl = document.getElementById('responseModal');
-            const responseModal = new bootstrap.Modal(responseModalEl);
-            responseModal.show();
+          // Re-initialize and show the response modal
+          const responseModalEl = document.getElementById('responseModal');
+          const responseModal = new bootstrap.Modal(responseModalEl);
+          responseModal.show();
 
-            // Optionally, remove feedbackModal if it is no longer needed
-            // feedbackModalEl.remove();
-          } else {
-            console.log('Failed to submit:', data);
-          }
-        })
-        .catch((error) => {
-          console.error('Fetch error:', error);
-        });
-    });
+          // Hide spinner and show the submit button again
+          document.getElementById('spinner-container').style.display = 'none';
+          document.getElementById('submit').style.display = 'block';
+        } else {
+          console.log('Failed to submit:', data);
+        }
+      })
+      .catch((error) => {
+        console.error('Fetch error:', error);
+        document.getElementById('spinner-container').style.display = 'none'; // Hide spinner
+        document.getElementById('submit').style.display = 'block'; // Show submit button again
+      });
+  });
 
   // Check if the modal should be prevented from opening
   const cookies = document.cookie.split(';').reduce((acc, cookie) => {
