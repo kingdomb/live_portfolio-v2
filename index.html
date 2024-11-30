@@ -53,47 +53,55 @@
                     </button>
                 </div>
                 <div class="modal-body">
-                    <p>I'd love to hear from you!</p>
-                    <h5><strong>Select an option below explaining how likely you are to call me for an
-                            interview?</strong>
+                    <h5><strong>Click an option below & add an email address.</strong>
                     </h5>
-                    <span style="color: #e6991f; font-size: small">Your feedback helps me to improve and better showcase
-                        my
-                        skills and experience.</span>
-                    <br><br>
-                    <form id="feedback-form" action="https://nodemailer-live-portfolio-v1.vercel.app/feedback" method="POST">
+                    <br>
+                    <form id="feedback-form" action="https://nodemailer-live-portfolio-v1.vercel.app/feedback"
+                        method="POST">
                         <div class="form-group">
+                            <label for="message-text" class="col-form-label">Visitor Feedback:&nbsp;</label>
+                            <!-- Feedback buttons -->
                             <button type="button" name="button1" id="button1"
                                 class="btn btn-modal-success btn-block likely-btn">
-                                <b>Very Likely:</b> I'm impressed and ready to connect.
+                                <b>Interview Likely</b>
                             </button>
                             <button type="button" name="button2" id="button2"
                                 class="btn btn-modal-warning btn-block likely-btn">
-                                <b>Somewhat Likely:</b> I'm interested, but need more information.
+                                <b>Interview Somewhat Likely</b>
                             </button>
                             <button type="button" name="button3" id="button3"
                                 class="btn btn-modal-danger btn-block likely-btn">
-                                <b>Not Likely:</b> I'm not convinced yet.
+                                <b>Interview Not Likely</b>
                             </button>
+                            <p id="feedbackErrorMessage" style="color: red; display: none; margin-top: 10px;"></p>
                         </div>
+
+                        <!-- Email input -->
                         <div class="form-group">
-                            <label for="message-text" class="col-form-label">Comments:&nbsp;
+                            <label for="recipient-email" class="col-form-label">Visitor Email:&nbsp;</label>
+                            <input type="email" name="email" class="form-control" id="recipient-email"
+                                placeholder="Enter your email address" />
+                            <!-- Error message placeholder -->
+                            <p id="emailErrorMessage" style="color: red; display: none; margin-top: 5px;"></p>
+                        </div>
+
+                        <!-- Comments input -->
+                        <div class="form-group">
+                            <label for="message-text" class="col-form-label">
+                                Visitor Comments:&nbsp;
                                 <span style="color: #e6991f; font-size: small; padding-left: 4px;">(Optional)</span>
                             </label>
-                            <textarea class="form-control" id="message-text" name="comments"></textarea>
+                            <textarea class="form-control" id="message-text" name="comments"
+                                placeholder="What did you like or what needs improvement?"></textarea>
                         </div>
-                        <div class="form-group">
-                            <label for="recipient-email" class="col-form-label">Email:&nbsp;
-                                <span style="color: #e6991f; font-size: small; padding-left: 4px;">(Optional)</span>
-                            </label>
-                            <input type="email" name="email" class="form-control" id="recipient-email">
-                        </div>
+
+                        <!-- Submit button and spinner -->
                         <div class="modal-footer d-flex justify-content-center">
                             <button type="submit" id="submit" class="btn btn-primary btn-md submit-btn"
                                 style="width: 30%;">Send</button>
                         </div>
                         <div id="spinner-container" style="display: none; text-align: center;">
-                            <button class="btn btn-primary btn-md" type="button"  style="width: 30%;" disabled>
+                            <button class="btn btn-primary btn-md" type="button" style="width: 30%;" disabled>
                                 <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
                                 Sending...
                             </button>
